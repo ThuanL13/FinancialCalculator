@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class MortgageCalculator {
     public static void main(String[] args) {
-        Scanner read = new Scanner(System.in); // Creates scanner
         System.out.println("=== Mortgage Calculator ===");
+        Scanner read = new Scanner(System.in); // Creates scanner
         calculateMortgage(read);
     }
     // Method to calculate mortgage payment and total interest
