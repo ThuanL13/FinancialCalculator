@@ -20,15 +20,15 @@ public class MortgageCalculator {
         // Converting annual rate to decimal
         double rate = annualRate / 100;
 
-        // Monthly interest
-        double interest = rate / 12;
+        // Interest
+        double monthlyInterest = rate / 12;
 
         // Number of monthly payments
         int numYears = years * 12;
 
         // Mortgage formula
-        double monthlyPayment = principal * (interest * Math.pow(1 + interest, numYears))
-                / (Math.pow(1 + interest, numYears) - 1);
+        double monthlyPayment = principal * (monthlyInterest * Math.pow(1 + monthlyInterest, numYears))
+                / (Math.pow(1 + monthlyInterest, numYears) - 1);
 
         // Total interest
         double totalInterest = (monthlyPayment * numYears) - principal;
@@ -36,7 +36,7 @@ public class MortgageCalculator {
         // Results
         System.out.printf("\nMonthly Payment: $%.2f\n", monthlyPayment);
 
-        System.out.printf("Your total interest paid is: $%.2f\n",totalInterest);
+        System.out.printf("Your total interest paid is: $%.2f\n", totalInterest);
 
         read.close();
         }
